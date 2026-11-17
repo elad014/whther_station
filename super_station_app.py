@@ -45,7 +45,7 @@ KV_RE: re.Pattern[str] = re.compile(r"^([^:]+):\s*(.+)$")
 NUM_RE: re.Pattern[str] = re.compile(r"(-?\d+(?:\.\d+)?)")
 FRAME_EDGE: str = "=================================================="
 TILE_CACHE: Path = Path.home() / ".cache" / "super_station" / "tiles"
-STATIC_BG_PATH: Path = Path.home() / "super_station_bg.png"
+STATIC_BG_PATH: Path = Path(__file__).resolve().parent / "super_station_bg.png"
 HOLIDAY_CACHE: Path = Path.home() / ".cache" / "super_station" / "holidays"
 MAP_ZOOM: int = 15
 USER_AGENT: str = "SuperStation/2.0 (Raspberry Pi home dashboard)"
